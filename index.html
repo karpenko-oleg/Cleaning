@@ -6,11 +6,12 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/zeroing.css">
+    <link rel="stylesheet" href="css/style-popUp.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Noto+Sans:wght@300;400;700&family=Roboto+Condensed:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-
+    
     <title>сЧИСТОЙлюбовью!</title>
 </head>
 <body>
@@ -20,43 +21,92 @@
                 <h1><img src="/img/main/logo.jpg" alt="">сЧИСТОЙлюбовью!</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Инвентарь</a></li>
-                        <li><a href="#">Цены</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a data-goto=".page__section_1" class="menu_link" href="#">Главная</a></li>
+                        <li><a data-goto=".page__section_2" class="menu_link" href="#">О нас</a></li>
+                        <li><a data-goto=".page__section_3" class="menu_link" href="#">Услуги</a></li>
+                        <li><a data-goto=".page__section_4" class="menu_link" href="#">Инвентарь</a></li>
+                        <li><a data-goto=".page__section_5" class="menu_link" href="#">Контакты</a></li>
                     </ul>
                 </nav>
                 <button class="burger__menu"><span class="burger__line1"></span><span class="burger__line2"></span><span class="burger__line3"></span></button>
+                <div class="nav__menu">
+                    <div class="nav__menu__wrapper">
+                    <div class="nav__menu_top">
+                        <div class="nav__menu_logo"><img src="/img/main/logo.jpg" alt=""></div>
+                    </div>
+                    <div class="nav__menu_link">
+                        <ul>
+                            <li><a data-goto=".page__section_1" class="menu_link" href="#">Главная</a></li>
+                            <li><a data-goto=".page__section_2" class="menu_link" href="#">О нас</a></li>
+                            <li><a data-goto=".page__section_3" class="menu_link" href="#">Услуги</a></li>
+                            <li><a data-goto=".page__section_4" class="menu_link" href="#">Инвентарь</a></li>
+                            <li><a data-goto=".page__section_5" class="menu_link" href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__menu_socual">
+                        <a href="https://vk.com/public218846262" target="_blank"><img src="./img/main/socual/vk.svg" alt=""></a>
+                        <a href=""><img src="./img/main/socual/telegram.svg" alt=""></a>
+                        <a href=""><img src="./img/main/socual/whatsapp.svg" alt=""></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="burger_popUp">
+                    <div class="burger_popUp_closs"><img class="popup__closse_img" src="./img/main/closse.svg" alt=""></div>
+                    <h2>Оставить заявку</h2>
+                    <form id="form" action="send.php" class="popup" method="POST" enctype="multipart/form-data">
+                        <label for="">
+                            <div class="label__text">
+                                Ваше имя
+                            </div>
+                            <input class="popup_input" type="text" name="name" required data-validate-fild="name">
+                        </label>
+                        <label for="">
+                            <div class="label__text">
+                                Ваш телефон
+                            </div>
+                            <input class="popup_input" type="tel" name="tel" required data-validate-fild="tel"> 
+                        </label>
+                        <button class="popup__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
             </section>
         </header>
         <main>
-            <section class="main">
+            <section class="main_section main page__section_1">
                 <div class="main_section_title">
-                    <h4><img src="./img/main/check-circle.svg" alt=""> Работаем с 2020 года</h2>
-                    <h2>Профессиональный клининг в Симферополе</h2>  
+                    <h4><img src="./img/main/check-circle.svg" alt=""> Работаем с 2018 года</h4>
+                    <h2>Профессиональный клининг в Симферополе</h2> 
+                    <h3>Мы создаём комфорт и уют для вас <a href="https://vk.com/public218846262" target="_blank">#сЧИСТОЙлюбовью!</a></h3> 
                     <p>
                         Клининг для частных лиц и компаний: уборка квартир, офисов, коттеджей, домов и зданий в Симферополе.
                     </p>
                     <article class="main__button button__connection">
                         <button class="button__connection_cal">Закзать звонок</button>
-                        <button class="button__connection_video"><a href=""><img src="./img/main/wathVideo.svg" alt="">Посмотреть уборку</a></button>
+                        <button class="button__connection_video"><a href="https://www.youtube.com/@user-cq6lb3rm2y" target="_blank"><img src="./img/main/wathVideo.svg" alt="">Посмотреть уборку</a></button>
                     </article>
+                    <div class="main_section_title_socual">
+                        <a href="https://vk.com/public218846262" target="_blank"><img src="./img/main/socual/vk.svg" alt=""></a>
+                        <a href="tg://resolve?domain=O_karpenko"><img src="./img/main/socual/telegram.svg" target="_blank"alt=""></a>
+                        <a href="https://wa.me/79297975091?text=Заявка с сайта" target="_blank"><img src="./img/main/socual/whatsapp.svg" alt=""></a>
+                    </div>
                 </div>
                 <div class="main__background">
-                    <img class="main__background_women" src="./img/main/mainBg-women.png" alt="">
-                    <img class="main__background_check" src="./img/main/bg-Shield-Done.svg" alt="">
-                    <img class="main__background_services" src="./img/main/bg-services.svg" alt="">
-                    <img class="main__background_masters" src="./img/main/bg-masters.svg" alt="">
+                    <div class="main__background_women">
+                        <img class="main__background_women_img"  src="./img/main/mainBg-women.png" alt="">
+                        <img class="main__background_check" src="./img/main/bg-Shield-Done.svg" alt="">
+                        <img class="main__background_services" src="./img/main/bg-services.svg" alt="">
+                        <img class="main__background_masters" src="./img/main/bg-masters.svg" alt="">
+                    </div>
                 </div>
             </section>
-            <section>
+            <section class="page__section_2">
                 <article class="experience">
                     <div class="experience__images">
-                        <div class="experience__img1"><img src="./img/main/experience-img1.png" alt=""></div>
-                        <div class="experience__img2"><img src="./img/main/experience-img2.png" alt=""></div>
-                        <div class="experience__img3"><img src="./img/main/experience-img3.png" alt=""></div>
+                        <div class="experience__images_bg">
+                            <!-- <div class="experience__img1"><img src="./img/main/experience-img1.png" alt=""></div> -->
+                            <div class="experience__img2"><img src="./img/main/experience/item1.jpg" alt=""></div>
+                            <div class="experience__img3"><img src="./img/main/experience/item4.jpg" alt=""></div>
+                        </div>
                     </div>
                     <div class="experience__text">
                         <h2>У нас большой опыт в клининговых услугах</h2>
@@ -70,7 +120,7 @@
                     </div>
                 </article>
             </section>
-            <section class="services">
+            <section class="services page__section_3">
                 <div class="services__title">
                     <h2>Всегда предоставляем лучший сервис</h2>
                     <h3>Каждый вид клининга имеет четкий план действий по которому сотрудник выполняет уборку</h3>
@@ -82,48 +132,63 @@
                         <p>Уборка после строительных работ, ремонта или в новой квартире от застройщика. Очистим вашу квартиру от пыли и грязи.</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://ab-cleaning.ru/upload/iblock/852/852e58d11212718f2a543a97b446fff5.jpeg" alt=""></div>
+                        <div class="services__card_item_images"><img src="./img/main/services/card15.jpg" alt=""></div>
                         <h3>Генеральная уборка</h3>
-                        <p>Максимальная чистота от клининговой компании Cleacom. Генеральная уборка квартиры в СПб от бытовых загрязнений.</p>
+                        <p>Профессиональная уборка #сЧИСТОЙлюбовью квартир, домов, коттеджей, офисов и коммерческих помещений по доступным ценам в Симферополе и  по всему Крыму!</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://klike.net/uploads/posts/2023-02/1677565386_3-50.jpg" alt=""></div>
+                        <div class="services__card_item_images"><img src="./img/main/services/card13.jpg" alt=""></div>
                         <h3>Поддерживающая уборка</h3>
                         <p>Чистка квартир и офисов на постоянной основе. Влажная уборка фасадов мебели и  поверхностей. Пылесос предоставляет заказчик.</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://static.tildacdn.com/tild3532-3335-4439-b433-373762373462/16093156.jpg" alt=""></div>
+                        <div class="services__card_item_images"><img src="./img/main/services/card16.jpg" alt=""></div>
+                        <h3>Очистка кухонного оборудования</h3>
+                        <p>Чистка кухонной бытовой техники любых габаритов, мытье шкафов и стеллажей, чистка вытяжек и вентиляционных устройств.</p>
+                    </div>
+                    <div class="services__card_item">
+                        <div class="services__card_item_images"><img src="./img/main/services/card18.jpg" alt=""></div>
                         <h3>Уборка квартир</h3>
                         <p>Профессиональные клининговые услуги для жилых помещений. Уборка квартиры в Симферополе и области по доступным ценам.</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://www.svcleaning.ru/images/4163703/okna1.jpg" alt=""></div>
+                        <div class="services__card_item_images"><img src="./img/main/services/card20.jpg" alt=""></div>
                         <h3>Мытье окон</h3>
                         <p>Моем окна в квартирах и помещениях. Сезонная мойка окон и после ремонта. Уберем грязь, строительную пыль. Мойка фасадов.</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://sun9-35.userapi.com/impg/XzJA6f5BfnEdCDd3DLuQ3U43Rh04bFp7GEOZkw/1kmNBZz3gz0.jpg?size=1110x738&quality=95&sign=2230f2be868ad0aa6cb1987dba8610ca&c_uniq_tag=8zVb0Kin7uJ7LwI-dOwdc7M31e0kvy6UlY2MTxtmTGk&type=album" alt=""></div>
+                        <div class="services__card_item_images"><img src="./img/main/services/card4.jpg" alt=""></div>
                         <h3>Уборка коттеджа</h3>
                         <p>Профессиональные клининговые услуги для жилых помещений. Уборка квартиры в Симферополе и области по доступным ценам.</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://burobiz-a.akamaihd.net/uploads/images/42507/large_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_%D0%BE%D1%82_2019-03-27_16-44-36.png" alt=""></div>
+                        <div class="services__card_item_images"><img src="./img/main/services/card17.jpg" alt=""></div>
                         <h3>Химчистка мебели</h3>
-                        <p>Химчистка диванов, матрасов, подушек, мягкой мебели и ковров на дому. Чистку можно заказать, как дополнение к уборке.</p>
+                        <p>Химчистка диванов, матрасов, подушек, мягкой мебели на дому. Чистку можно заказать, как дополнение к уборке.</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://omaske.ru/wp-content/uploads/2022/03/foto-himhistka.jpg" alt=""></div>
-                        <h3>Химчистка ковров</h3>
-                        <p>Химчистка ковра на дому или с вывозом в цех. Влажная чистка ковров и ковролина, недорогая уборка пятен.</p>
+                        <div class="services__card_item_images"><img src="./img/main/services/card19.jpg" alt=""></div>
+                        <h3>Химчистка авто</h3>
+                        <p>Химчистка авто, детских кресел с выездом на дом. Используем только профессиональные средства мировых брендов.</p>
                     </div>
                     <div class="services__card_item">
-                        <div class="services__card_item_images"><img src="https://dillmart.ru/images/2021/07/01/svsd_94520.jpg" alt=""></div>
+                        <div class="services__card_item_images"><img src="./img/main/services/card9.jpg" alt=""></div>
                         <h3>Химчистка матраса</h3>
                         <p>Качественная чистка матрасов с сушкой у вас дома. Возможность клининга в день заказа уточняйте у менеджера.</p>
                     </div>
+                    <div class="services__card_item">
+                        <div class="services__card_item_images"><img src="./img/main/services/card7.jpg" alt=""></div>
+                        <h3>Уборка офисных помещений</h3>
+                        <p>Профессиональная уборка офисов, может проводиться в любое время, удобное вам и вашим сотрудникам – рано утром или в поздние вечерние часы.</p>
+                    </div>
+                    <div class="services__card_item">
+                        <div class="services__card_item_images"><img src="./img/main/services/card14.jpg" alt=""></div>
+                        <h3>Химчистка ковров</h3>
+                        <p>Специализированная ХИМЧИСТКА КОВРОВ в Симферополе, доверьтесь профессионалам чистоты.</p>
+                    </div>
                 </div>
             </section>
-            <section class="inventory">
+            <section class="inventory page__section_4">
                 <div class="inventory__body">
                     <div class="inventory__title">
                         <h3>Используем только качественную профессиональную химию и инвентарь</h3>
@@ -146,18 +211,17 @@
                 </div>
             </section>
             <section class="questions">
-                <img class="questions_img" src="img/main/questions-bg.png" alt="">
-                <article class="questions__title">
-                    <h2>Готовы ли вы работать с нами сейчас?</h2>
-                    <h3>Уборка - наше любимое дело, поэтому предоставьте всю грязную тяжелую рабооту нашим специалистам</h3>
-                    <article class="button__connection">
-                        <button class="button__connection_cal">Закзать звонок</button>
-                        <button class="button__connection_video questions_btn"><a href=""><img src="./img/main/wathVideo.svg" alt="">Посмотреть уборку</a></button>
+                    <article class="questions__title">
+                        <h2>Готовы ли вы работать с нами сейчас?</h2>
+                        <h3>Уборка - наше любимое дело, поэтому предоставьте всю грязную тяжелую рабооту нашим специалистам</h3>
+                        <article class="button__connection">
+                            <button class="button__connection_cal">Закзать звонок</button>
+                            <button class="button__connection_video questions_btn"><a href="https://www.youtube.com/@user-cq6lb3rm2y" target="_blank"><img src="./img/main/wathVideo.svg" alt="">Посмотреть уборку</a></button>
+                        </article>
                     </article>
-                </article>
             </section>
         </main>
-        <footer>
+        <footer class="page__section_5">
             <section class="footer_wrapper">
                 <article class="logo">
                     <a href=""><img src="./img/main/logo.jpg" alt="">сЧИСТОЙлюбовью!</a>
@@ -183,14 +247,14 @@
                     </div>
                     <article class="info">
                         <ul>
-                            <li><a href="" type="email">simferopol@gmail.com</a></li>
-                            <li><a href="" type="tel">+7-875-854-46-72</a></li>
-                            <li><a href="">Г. Симферополь, <br>октябрьская наб. д.20</a></li>
+                            <li><a href="mailto:himchistka.i.uborka@gmail.com" type="email">himchistka.i.uborka@gmail.com</a></li>
+                            <li><a href="tel:+79782480819" type="tel:+79782480819">+7-978-248-08-19</a></li>
+                            <li><a href="">Г. Симферополь</a></li>
                         </ul>
                         <div class="footer_socual">
-                            <a href=""><img src="./img/main/socual/vk.svg" alt=""></a>
-                            <a href=""><img src="./img/main/socual/telegram.svg" alt=""></a>
-                            <a href=""><img src="./img/main/socual/whatsapp.svg" alt=""></a>
+                            <a href="https://vk.com/public218846262" target="_blank"><img src="./img/main/socual/vk.svg" alt=""></a>
+                            <a href="tg://resolve?domain=O_karpenko"><img src="./img/main/socual/telegram.svg" target="_blank"alt=""></a>
+                            <a href="https://wa.me/79297975091?text=Заявка с сайта" target="_blank"><img src="./img/main/socual/whatsapp.svg" alt=""></a>
                         </div>
                     </article>
                 </div>
@@ -201,5 +265,8 @@
             </section>
         </footer>
     </section>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
